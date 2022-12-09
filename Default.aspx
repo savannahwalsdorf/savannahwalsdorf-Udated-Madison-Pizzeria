@@ -1,11 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication2._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <style type="text/css">
-        body {
-            background: #C0C0C0 !important;
-        }
-    </style>
 
     <div class="text-center">
         <br />
@@ -16,6 +11,6 @@
         <br />
     </div>
     
-    <asp:Button ID="StartOrder" Text="Start Order!" OnClick="StartOrderButton" runat="server" />
+    <asp:Button ID="StartOrder" Text="Start Order!" OnClick="StartOrderButton" runat="server" class="btn-dark btn-outline-light btn-lg"/>
 
 </asp:Content>
