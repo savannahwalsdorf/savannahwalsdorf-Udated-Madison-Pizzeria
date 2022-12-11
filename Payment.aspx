@@ -23,7 +23,7 @@
 		</p>
 
 		<p><b>Credit/Debit Card Information: </b></p>
-		<label id="heading2" for="cardType" style="margin-left: 40px;">
+		<label id="heading2" for="cardType" style="margin-left: 40px; font-weight: normal;">
 			Select Card Type:
 		</label>
 		<select name="cardType" id="cardType">
