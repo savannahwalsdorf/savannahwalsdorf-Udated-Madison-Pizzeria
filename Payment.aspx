@@ -3,45 +3,34 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Payment</h2>
-	<style>
-		#heading00 {
-			margin-left: 40px;
-		}
-
-		#heading01 {
-			margin-left: 80px;
-		}
-	</style>
-
-
     <br>
 		<p><b>Personal Information: </b></p>
-		<p id="heading0" class="heading00">
+		<p id="heading0" style="margin-left: 40px;">
 			Name On Order:
 			<input type="text"
 				   name="name"
-				   pattern="[A-Za-z]{1-30}"
-				   title="Name Format: 1-30 Characters (John, John Doe)"
+				   pattern="[A-Za-z0-9]{1-30}"
+				   title="Name Format: 1-30 Characters (John, John Doe, John1)"
 				   required />
 		</p>
-		<p id="heading1" class="heading00">
+		<p id="heading1" style="margin-left: 40px;">
 			Email Address:
 			<input type="text"
 				   name="email"
-				   pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,8}$"
+				   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$"
 				   title="Email Format: abc123@abc123.abc"
 				   required />
 		</p>
 
 		<p><b>Credit/Debit Card Information: </b></p>
-		<label id="heading2" for="cardType">
+		<label id="heading2" for="cardType" style="margin-left: 40px;">
 			Select Card Type:
 		</label>
-		<select name="cardType" id="cardType" class="heading00">
+		<select name="cardType" id="cardType">
 			<option value="credit">Credit</option>
 			<option value="debit">Debit</option>
 		</select><br>
-		<p style="margin-left: 40px;" class="heading00">
+		<p style="margin-left: 40px;">
 			Card Number:
 			<input type="text"
 				   name="cardNumber"
@@ -49,9 +38,17 @@
 				   title="Card Number Format: 8 digits (12345678)"
 				   required />
 		</p>
-		<p id="heading3" class="heading00">
+		<p style="margin-left: 40px;">
+			CVC Code:
+			<input type="text"
+				   name="cvcNumber"
+				   pattern="[0-9]{2}"
+				   title="CVC Code Format: 2 digits (12)"
+				   required />
+		</p>
+		<p id="heading3" style="margin-left: 40px;">
 			Expiration Date:
-		<p id="heading4" class="heading01">
+		<p id="heading4" style="margin-left: 80px;">
 			Month:
 			<select name="expMonth" id="expMonth">
 				<option value="january">Jan</option>
@@ -68,7 +65,7 @@
 				<option value="december">Dec</option>
 			</select>
 		</p>
-		<p id="heading5" class="heading01">
+		<p id="heading5" style="margin-left: 80px;">
 			Year:
 			<input type="text"
 				   name="expYear"
